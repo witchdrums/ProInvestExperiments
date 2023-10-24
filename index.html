@@ -28,15 +28,24 @@
         <div class="controles">
             <div class="grupo-controles">
                 <label for="tipos-inversion">Tipos de Inversi'on</label>
-                <div id="tipos-inversion" class="list-group">
-                    <a href="#" class="list-group-item list-group-item-action active">
-                      Cras justo odio
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
-                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
-                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
-                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
-                </div>                
+                <ul id="tipos-inversion" class="list-group">
+                    <li class="list-group-item list-group-item-action active">
+                      CETES
+                    </li>
+                    <li class="list-group-item list-group-item-action">Dapibus ac facilisis in</li>
+                    <li class="list-group-item list-group-item-action">Morbi leo risus</li>
+                    <li class="list-group-item list-group-item-action">Porta ac consectetur ac</li>
+                    <li class="list-group-item list-group-item-action disabled">Vestibulum at eros</li>
+                </ul>      
+                
+                <ul id="tipos-inversion-horizontal" class="list-group list-group-horizontal  overflow-auto position-relative w-100">
+                    <li class="list-group-item ">Item 1</li>
+                    <li class="list-group-item">Item 2</li>
+                    <li class="list-group-item">Item 3</li>
+                    <li class="list-group-item">Item 4</li>
+                    <li class="list-group-item">Item 5</li>
+
+                </ul>
             </div>
             <div class="grupo-controles">
                 <label for="monto">Monto a invertir:</label>
@@ -45,6 +54,12 @@
             <div class="grupo-controles">
                 <label for="plazo">Plazo en anios:</label>
                 <input id="plazo" placeholder="Enter a number" required type="number" value="" min="1" max="5" step="1"/>
+            </div>
+            <div class="grupo-controles">
+                <button class="btn btn-secondary botones">Simular inversi'on</button>
+            </div>
+            <div class="grupo-controles">
+                <button class="btn btn-primary botones">Invertir ahora</button>
             </div>
         </div>
         <div class="grafica">

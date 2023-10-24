@@ -16,18 +16,47 @@
 
 
 .grupo-controles{
+    padding: 30px 0 0 0;
+}
+
+.botones{
+    width: 100%;
+}
+
+#tipos-inversion-horizontal{
+    display: none;
 }
 
 @media only screen and (max-width: 768px){
     .simulador{
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
     }
     .grafica{
-        grid-row: 1 / span 1;
+        grid-row: 1 / span 4;
         grid-column: 1/span 5;
     }
     .controles{
-        grid-row: 2 / span 1;
+        grid-row: 5 / span 4;
         grid-column: 1/span 5;
+    }
+
+    #tipos-inversion{
+        display: none;
+    }
+    #tipos-inversion-horizontal{
+        display: flex;
+        width: 100%;
+    }
+
+    .grupo-controles{
+        padding: 20px 0 0 0;
+    }
+
+    ul{
+        display: flex;
+    }
+
+    li{
+        width: 100%;
     }
 }
