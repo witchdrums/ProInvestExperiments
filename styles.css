@@ -10,7 +10,7 @@
     background-color: red;
 }
 
-.controles{
+.controles{ 
     grid-column: 1 / span 2;
 }
 
