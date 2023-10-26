@@ -1,22 +1,31 @@
 window.addEventListener("load", function(){
-  console.log("fuck1");
-fuck();
+  let tiposInversionListaVertical = document.getElementById("tipos-inversion");
+  let tiposInversionListaHorizontal = document.getElementById("tipos-inversion-horizontal");
+  llenarLista(tiposInversionListaVertical);
+  llenarLista(tiposInversionListaHorizontal);
+
+  const tipoInversionBoton = document.querySelector(".list-group-item");
+  
+  //tipoInversionBoton.addEventListener("click", function(){
+  //tipoInversionBoton.classList.add("active");
+//});
 
 });
 
-function fuck(){
-  let data = ["Ram", "Shyam", "Sita", "Gita"];
-  let list = document.getElementById("tipos-inversion");
-  for (i = 0; i < data.length; ++i) {
-      let li = document.createElement('li');
-      li.innerText = data[i];
-      list.appendChild(li);
+function llenarLista(tiposInversionLista){
+  let tiposInversionObtenida = ["Ram", "Shyam", "Sita", "Gita"];// Tipos de inversion desde API
+  for (let i = 0; i < tiposInversionObtenida.length; ++i) {
+      let lista = document.createElement('li');
+      lista.classList.add("list-group-item");
+      lista.classList.add("list-group-item-action");
+      $('li').attr('data-bs-toggle','list');
+      lista.innerText = tiposInversionObtenida[i];
+      tiposInversionLista.appendChild(lista);
   }
 }
 
 // Configuracion de la grafica:
 (async function() {
-  console.log("fuck2");
     const dataArray = [
       { year: 2010, count: 13 },
       { year: 2011, count: 20 },
