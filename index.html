@@ -20,6 +20,10 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="src/bootstrap-input-spinner.js"></script>
     <!-- finally made it work holy fuck-->
+
+    <!--Chart.js-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!--Chart.js-->
     
     <title>Document</title>
 </head>
@@ -39,11 +43,11 @@
                 </ul>      
                 
                 <ul id="tipos-inversion-horizontal" class="list-group list-group-horizontal  overflow-auto position-relative w-100">
-                    <li class="list-group-item ">Item 1</li>
-                    <li class="list-group-item">Item 2</li>
-                    <li class="list-group-item">Item 3</li>
-                    <li class="list-group-item">Item 4</li>
-                    <li class="list-group-item">Item 5</li>
+                    <li class="list-group-item list-group-item-action">Item 1</li>
+                    <li class="list-group-item list-group-item-action">Item 2</li>
+                    <li class="list-group-item list-group-item-action">Item 3</li>
+                    <li class="list-group-item list-group-item-action">Item 4</li>
+                    <li class="list-group-item list-group-item-action">Item 5</li>
 
                 </ul>
             </div>
@@ -55,15 +59,11 @@
                 <label for="plazo">Plazo en anios:</label>
                 <input id="plazo" placeholder="Enter a number" required type="number" value="" min="1" max="5" step="1"/>
             </div>
-            <div class="grupo-controles">
-                <button class="btn btn-secondary botones">Simular inversi'on</button>
-            </div>
-            <div class="grupo-controles">
-                <button class="btn btn-primary botones">Invertir ahora</button>
-            </div>
+            <button class="btn btn-secondary botones">Simular inversi'on</button>
+            <button class="btn btn-primary botones">Invertir ahora</button>
         </div>
         <div class="grafica">
-
+            <canvas id="myChart" ></canvas>
         </div>
     </div>
 
@@ -72,6 +72,7 @@
         $("input[type='number']").inputSpinner()
         $(".buttons-only").inputSpinner({buttonsOnly: true, autoInterval: undefined })
     </script>
+    <script type="module" src="simulador.js"></script>
 </body>
 
 </html>
