@@ -1,2 +1,2 @@
 # ProInvestExperiments
-experimentos SECRETOS para mi proyecto de sistemas web, nadie puede verlos 🔫 👮 🚨 
+SECRET experiments for my SECRET project. you CANT see them 🔫 👮 🚨 
