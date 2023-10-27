@@ -1,46 +1,37 @@
-
 window.addEventListener("load", function(){
   inicializarBotonSimularInversion();
-  let tiposInversionListaVertical = document.getElementById("tipos-inversion");
-  let tiposInversionListaHorizontal = document.getElementById("tipos-inversion-horizontal");
-  llenarLista(tiposInversionListaVertical);
-  llenarLista(tiposInversionListaHorizontal);
-
-  
-  //const tipoInversionBoton = document.querySelector(".list-group-item");
-  
-  //tipoInversionBoton.addEventListener("click", function(){
-  //tipoInversionBoton.classList.add("active");
-//});
+  llenarLista();
 
 });
 
 function inicializarBotonSimularInversion(){
-  /*
-  const boton = document.getElementById("boton-simular-inversion");
-  boton.addEventListener("click", function(){
-    $("#myModal").modal();
-  });
-*/
-console.log("inicializarBotonSimularInversion")
-$("#boton-simular-inversion").click(function(){
-  $("#myModal").modal();
-});
+    $("#boton-simular-inversion").click(function(){
+      console.log("hola :D");
+    });
 }
 
-function llenarLista(tiposInversionLista){
-
+function llenarLista(){
+  let divTiposInversion = document.getElementById("div-tipos-inversiones")
   let tiposInversionObtenidos = ["Ram", "Shyam", "Sita", "Gita", "fuck"];// Tipos de inversion desde API
   for (let i = 0; i < tiposInversionObtenidos.length; ++i) {
-      let tipoInversion = document.createElement('li');
-      tipoInversion.classList.add("list-group-item");
-      tipoInversion.classList.add("list-group-item-action");
-      tipoInversion.innerText = tiposInversionObtenidos[i];
-      tiposInversionLista.appendChild(tipoInversion);
-  }
+      let botonTipoInversion = document.createElement('input');
+      if (i===0) {
+          botonTipoInversion.setAttribute("checked","");
+      }
+      botonTipoInversion.setAttribute("id", tiposInversionObtenidos[i]);
+      botonTipoInversion.setAttribute("type", "radio");
+      botonTipoInversion.setAttribute("name", "tipo-inversion");
+      botonTipoInversion.setAttribute("autocomplete", "off");
+      botonTipoInversion.classList.add("btn-check");
+      divTiposInversion.appendChild(botonTipoInversion);
 
-  // 
-  $('li').attr('data-bs-toggle','list');
+      let labelTipoInversion = document.createElement("label");
+      labelTipoInversion.classList.add("btn");
+      labelTipoInversion.classList.add("btn-outline-primary");
+      labelTipoInversion.setAttribute("for", tiposInversionObtenidos[i]);
+      labelTipoInversion.innerText = tiposInversionObtenidos[i];
+      divTiposInversion.appendChild(labelTipoInversion);
+  }
 }
 
 // Configuracion de la grafica:
@@ -77,7 +68,5 @@ function llenarLista(tiposInversionLista){
       }
     );
   })();
-
-  // Inicialización de los tipos de inversion
 
 
