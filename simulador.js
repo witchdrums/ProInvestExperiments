@@ -1,10 +1,13 @@
+
 window.addEventListener("load", function(){
+  inicializarBotonSimularInversion();
   let tiposInversionListaVertical = document.getElementById("tipos-inversion");
   let tiposInversionListaHorizontal = document.getElementById("tipos-inversion-horizontal");
   llenarLista(tiposInversionListaVertical);
   llenarLista(tiposInversionListaHorizontal);
 
-  const tipoInversionBoton = document.querySelector(".list-group-item");
+  
+  //const tipoInversionBoton = document.querySelector(".list-group-item");
   
   //tipoInversionBoton.addEventListener("click", function(){
   //tipoInversionBoton.classList.add("active");
@@ -12,16 +15,32 @@ window.addEventListener("load", function(){
 
 });
 
+function inicializarBotonSimularInversion(){
+  /*
+  const boton = document.getElementById("boton-simular-inversion");
+  boton.addEventListener("click", function(){
+    $("#myModal").modal();
+  });
+*/
+console.log("inicializarBotonSimularInversion")
+$("#boton-simular-inversion").click(function(){
+  $("#myModal").modal();
+});
+}
+
 function llenarLista(tiposInversionLista){
-  let tiposInversionObtenida = ["Ram", "Shyam", "Sita", "Gita"];// Tipos de inversion desde API
-  for (let i = 0; i < tiposInversionObtenida.length; ++i) {
-      let lista = document.createElement('li');
-      lista.classList.add("list-group-item");
-      lista.classList.add("list-group-item-action");
-      $('li').attr('data-bs-toggle','list');
-      lista.innerText = tiposInversionObtenida[i];
-      tiposInversionLista.appendChild(lista);
+
+  let tiposInversionObtenidos = ["Ram", "Shyam", "Sita", "Gita", "fuck"];// Tipos de inversion desde API
+  for (let i = 0; i < tiposInversionObtenidos.length; ++i) {
+      let tipoInversion = document.createElement('li');
+      tipoInversion.classList.add("list-group-item");
+      tipoInversion.classList.add("list-group-item-action");
+      tipoInversion.innerText = tiposInversionObtenidos[i];
+      tiposInversionLista.appendChild(tipoInversion);
   }
+
+  // 
+  $('li').attr('data-bs-toggle','list');
 }
 
 // Configuracion de la grafica:
