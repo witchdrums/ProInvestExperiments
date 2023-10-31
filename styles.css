@@ -2,7 +2,7 @@
 .simulador{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-
+    background-color: red;
 }
 
 .grafica{
@@ -11,6 +11,7 @@
 
 .controles{ 
     grid-column: 1 / span 2;
+    background-color: green;
 }
 
 
@@ -34,7 +35,7 @@
 #myChart{
 
     display: block;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     width: 600px;
     height: 250px;
 }
@@ -42,30 +43,48 @@
 #div-tipos-inversiones{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+#navbar{
+    display: none;
+    background-color: red;
 }
 
 @media only screen and (max-width: 768px){
+    body{
+        overflow: hidden;
+    }
+
     #div-tipos-inversiones{
+
         flex-direction: row;
+        align-items: center;
+
+    }
+
+    #div-tipos-inversiones-container{
         flex-wrap: nowrap;
         overflow-x: auto;
+        display: flex;
     }
+
     .btn-outline-primary{
         flex-basis: 100%;
+        white-space: nowrap;
     }
     .simulador{
-        grid-template-rows: repeat(8, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        padding: 1vw 7vw;
     }
     .grafica{
-        grid-row: 1 / span 4;
+        grid-row: 1 / span 1;
         grid-column: 1/span 5;
     }
     .controles{
-        grid-row: 5 / span 4;
+        grid-row: 2 / span 2;
         grid-column: 1/span 5;
     }
-
 
 
     #tipos-inversion{
@@ -85,11 +104,12 @@
     }
 
     .grupo-controles{
-        padding: 10px 0 0 0;
+        padding: 20px 0 0 0;
     }
 
     .botones{
-        padding: 20px 0 0 0;
+        display: block;
+        padding: 100px 0 0 0;
     }
 
 
