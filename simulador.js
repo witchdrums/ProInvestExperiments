@@ -20,7 +20,6 @@ function llenarLista(){
       }
       botonTipoInversion.setAttribute("id", tiposInversionObtenidos[i]);
       botonTipoInversion.setAttribute("type", "radio");
-      botonTipoInversion.setAttribute("name", "tipo-inversion");
       botonTipoInversion.setAttribute("autocomplete", "off");
       botonTipoInversion.classList.add("btn-check");
       divTiposInversion.appendChild(botonTipoInversion);
@@ -30,7 +29,12 @@ function llenarLista(){
       labelTipoInversion.classList.add("btn-outline-primary");
       labelTipoInversion.setAttribute("for", tiposInversionObtenidos[i]);
       labelTipoInversion.innerText = tiposInversionObtenidos[i];
-      divTiposInversion.appendChild(labelTipoInversion);
+
+      let divTipoInversion = document.createElement("div");
+      divTipoInversion.setAttribute("class", "tipo-inversion");
+      divTipoInversion.appendChild(labelTipoInversion);
+      divTipoInversion.appendChild(botonTipoInversion);
+      divTiposInversion.appendChild(divTipoInversion);
   }
 }
 
