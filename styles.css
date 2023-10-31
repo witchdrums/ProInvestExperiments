@@ -1,8 +1,10 @@
 
+
 .simulador{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     background-color: red;
+
 }
 
 .grafica{
@@ -41,7 +43,6 @@
 }
 
 #div-tipos-inversiones{
-    display: flex;
     flex-direction: column;
     justify-content: center;
 }
@@ -51,32 +52,33 @@
     background-color: red;
 }
 
-body{
-    overflow-x: clip;
-}
-
 @media only screen and (max-width: 768px){
 
 
     #div-tipos-inversiones{
-        display: inline-block;
-        overflow-x: clip;
+        overflow: auto;
         white-space: nowrap;
+        max-width: 100%;
+
     }
 
     .tipo-inversion{
         display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        max-width: 100%;
+        background-color: aqua
     }
 
     #div-tipos-inversiones-container{
-
-        overflow-x: scroll;
+        max-width: 100%;
 
     }
 
     .simulador{
         grid-template-rows: repeat(1, 1fr);
         padding: 1vw 7vw;
+
     }
     .grafica{
         grid-row: 1 / span 1;

@@ -28,13 +28,32 @@
     <title>Document</title>
 </head>
 <body>
+
+<div class="btn-group">
+    <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Action
+    </button>
+    <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>
+        <a class="dropdown-item" href="#">Something else here</a>
+        <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="#">Separated link</a>
+    </div>
+</div>
+
     <div class="simulador">
         <div class="controles">
 
-            <label for="div-tipos-inversiones" class="grupo-controles">Tipos de Inversion</label>
-            <div id="div-tipos-inversiones-container">
-                <div id="div-tipos-inversiones"></div>
+
+            <div class="dropdown">
+                <button id="dropdown-button" class="btn btn-secondary btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    CETES
+                </button>
+                <div id="dropdown-tipos-inversiones" class="dropdown-menu" aria-labelledby="dropdown-button">
+                </div>
             </div>
+
 
             <div class="grupo-controles">
                 <label for="monto">Monto a invertir:</label>

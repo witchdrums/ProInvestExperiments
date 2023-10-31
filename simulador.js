@@ -11,30 +11,31 @@ function inicializarBotonSimularInversion(){
 }
 
 function llenarLista(){
-  let divTiposInversion = document.getElementById("div-tipos-inversiones")
+  let divTiposInversion = document.getElementById("dropdown-tipos-inversiones")
   let tiposInversionObtenidos = ["CETES", "BONOS", "BONDDIA", "BONDES", "INVERSIONX", "WE KNOW WHERE", "YOU FUCKING LIVEEEEEEEEEEEEEEE"];// Tipos de inversion desde API
   for (let i = 0; i < tiposInversionObtenidos.length; ++i) {
-      let botonTipoInversion = document.createElement('input');
-      if (i===0) {
-          botonTipoInversion.setAttribute("checked","");
-      }
-      botonTipoInversion.setAttribute("id", tiposInversionObtenidos[i]);
-      botonTipoInversion.setAttribute("type", "radio");
-      botonTipoInversion.setAttribute("autocomplete", "off");
-      botonTipoInversion.classList.add("btn-check");
-      divTiposInversion.appendChild(botonTipoInversion);
+      // let botonTipoInversion = document.createElement('input');
+      // if (i===0) {
+      //     botonTipoInversion.setAttribute("checked","");
+      // }
+      // botonTipoInversion.setAttribute("id", tiposInversionObtenidos[i]);
+      // botonTipoInversion.setAttribute("type", "radio");
+      // botonTipoInversion.setAttribute("autocomplete", "off");
+      // botonTipoInversion.classList.add("btn-check");
+      // divTiposInversion.appendChild(botonTipoInversion);
 
-      let labelTipoInversion = document.createElement("label");
-      labelTipoInversion.classList.add("btn");
-      labelTipoInversion.classList.add("btn-outline-primary");
-      labelTipoInversion.setAttribute("for", tiposInversionObtenidos[i]);
+      let labelTipoInversion = document.createElement("a");
+      labelTipoInversion.classList.add("dropdown-item");
+      // labelTipoInversion.classList.add("btn-outline-primary");
+      // labelTipoInversion.setAttribute("for", tiposInversionObtenidos[i]);
       labelTipoInversion.innerText = tiposInversionObtenidos[i];
 
-      let divTipoInversion = document.createElement("div");
-      divTipoInversion.setAttribute("class", "tipo-inversion");
-      divTipoInversion.appendChild(labelTipoInversion);
-      divTipoInversion.appendChild(botonTipoInversion);
-      divTiposInversion.appendChild(divTipoInversion);
+      // let divTipoInversion = document.createElement("div");
+      // divTipoInversion.setAttribute("class", "tipo-inversion");
+      // divTipoInversion.appendChild(labelTipoInversion);
+      // divTipoInversion.appendChild(botonTipoInversion);
+      //
+      divTiposInversion.appendChild(labelTipoInversion);
   }
 }
 
